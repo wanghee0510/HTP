@@ -15,6 +15,9 @@ namespace Project_HTP.Models
             : base(options)
         {
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
         public DbSet<StudentList> StudentLists { get; set; }
     }
 }
