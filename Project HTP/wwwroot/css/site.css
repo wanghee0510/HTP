@@ -33,6 +33,10 @@ html {
   html {
     font-size: 16px;
   }
+    .col-sm-6 {
+        float: left;
+        width: 50%;
+    }
 }
 
 .border-top {
@@ -61,11 +65,80 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: normal; /*Vertically center the text there */
+    background-color: lightgray;
+    
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.list-inline { 
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+    margin-top: 7px;
+}
+
+.list-inline > li {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+}
+
+.foot-menu a {
+    padding: 5px 0;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+}
+
+.namcopy {
+    font-size: 0.5em;
+    color: #000000;
+    text-transform: uppercase;
+    font-family: 'Arial';
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+}
+
+.col-sm-6, .col-sm-12 {
+    
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+footer ul, .namcopy {
+    text-align: !important;
+}
+
+.foot-menu a {
+    padding-bottom: 5px !important;
+}
+.copy {
+    padding-left: 15px;
+    padding-bottom:5px;
+}
+ul {
+    margin: 0;
 }
