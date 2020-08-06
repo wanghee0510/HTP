@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Project_HTP</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
 </head>
 <body>
     <header>
@@ -34,10 +35,40 @@
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Project_HTP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul class="list-inline foot-menu">
+                        <li>
+                            <a href="#">Information</a>
+                        </li>
+                        <li>
+                            <a href="#">What next</a>
+                        </li>
+                        <li>
+                            <a href="#">Policies</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="list-inline text-right social">
+                        <li>
+                            <a href="https://www.instagram.com/?hl=vi"><img src="https://i0.pngocean.com/files/554/20/29/logo-computer-icons-royalty-free-clip-art-instagram-logo.jpg" alt="instagram" width="25" height="28"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCM41OLqh8vIL0UH6qQ-qM_g"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScpPyPe7YXOE7m09_OKnfKpBHUaPc2DXXuAA&usqp=CAU" alt="youtube" width="25" height="28"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/htpfoundation/"><img src="https://f0.pngfuel.com/png/438/729/black-and-white-facebook-logo-facebook-computer-icons-like-button-black-and-white-png-clip-art.png" alt="facebook" width="25" height="28"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 namcopy">
+                    Quỹ học bỗng Huỳnh Tấn Phát . <br>11 Lê Ngô Cát, P7, Q3, TP.HCM. <br>Phone: 0765261579‬ (Ms Ngọc). <br>Email: quyhocbonghuynhtanphat@gmail.com
+                </div>
+                <div class="copy text-right namcopy"> &copy; 2020 - Nhan Tong Application</div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
