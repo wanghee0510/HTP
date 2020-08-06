@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Project_HTP.Models.LoginUser>
+
+@{
+    Layout = null;
+}
+<head>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="Login">
+        <img src="~/Image/icon_three_done.png" />
+        <h2>Member Login</h2>
+
+        <form>
+
+            <i class="fa fa-user icon">  UserName</i>
+            <input type="text" name="user" placeholder="UserName" />
+
+            <i class="fa fa-key icon">  Password</i>
+            <input type="password" name="pass" placeholder="******" />
+            <br />
+            <input type="submit" name="" value="Login" />
+            <br />
+            <a href="#">Create Password</a>
+
+        </form>
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('image/web_login.png');
+        background-size: cover;
+        font-family: sans-serif;
+    }
+
+    .Login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 350px;
+        height: 420px;
+        padding: 80px 40px;
+        box-sizing: border-box;
+        background: rgba(0,0,0,0.3);
+    }
+    img{
+        width:70px;
+        margin-top:-70px;
+        padding-left:100px
+        
+    }
+    h2 {
+        
+        font: bold;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        color: blue;
+        font-size: 25px;
+        margin-bottom:10px
+    }
+    .Login i{
+        margin-left:15px;
+        margin-bottom:10px;
+        color:white;
+        font-size:15px;
+        border-bottom: 2px solid white;
+    }
+    .Login input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Login input[type="text"], input[type="password"] {
+        border: none;
+        background: rgba(0,0,0,0.4);
+        outline: none;
+        height: 40px;
+        font-size: 13px;
+        color:white;
+        border-radius: 20px;
+        padding-left: 10px;
+    }
+    
+    .Login input[type="submit"] {
+        border: none;
+        outline: none;
+        height: 40px;
+        background: linear-gradient(to right,blue,#2b96d1);
+        color: darkblue;
+        font-size: 18px;
+        font:blod;
+        border-radius: 20px;
+    }       
+
+    .Login input[type="submit"]:hover {
+        cursor: pointer;
+        background: red;
+        color: #000;
+    }
+
+    .Login a {
+        padding-left:80px;
+        margin: 12px 0;
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 20px;
+        color: blue;
+    }
+
+    .Login a:hover {
+        color: red;
+    }
+    
+</style>
+
