@@ -9,8 +9,8 @@ using Project_HTP.Models;
 namespace Project_HTP.Migrations
 {
     [DbContext(typeof(DbContextHTP))]
-    [Migration("20200803101153_Create Table HTP")]
-    partial class CreateTableHTP
+    [Migration("20200807061012_Create Table Test")]
+    partial class CreateTableTest
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

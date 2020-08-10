@@ -2,7 +2,7 @@
 
 namespace Project_HTP.Migrations
 {
-    public partial class CreateTableHTP : Migration
+    public partial class CreateTableTest : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

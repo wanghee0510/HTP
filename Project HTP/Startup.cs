@@ -26,7 +26,7 @@ namespace Project_HTP
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<DbContextHTP>(options => options.UseSqlServer("Data Source=DESKTOP-5KLAF40\\SQL2019;Initial Catalog=HTP;User ID=Main;password=123;MultipleActiveResultSets=True;App=EntityFramework"));
+            services.AddDbContext<DbContextHTP>(options => options.UseSqlServer("Data Source=DESKTOP-4GS3H09;Initial Catalog=HTP;User ID=sa;password=123;MultipleActiveResultSets=True;App=EntityFramework"));
 
         }
 
