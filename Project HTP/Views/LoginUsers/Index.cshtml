@@ -12,17 +12,18 @@
         <h2>Member Login</h2>
 
         <form>
-
-            <i class="fa fa-user icon">  UserName</i>
-            <input type="text" name="user" placeholder="UserName" />
-
+            <i class="fa fa-envelope-o icon">  Email</i>
+            <input type="email" name="email" placeholder="Email" />
             <i class="fa fa-key icon">  Password</i>
             <input type="password" name="pass" placeholder="******" />
-            <br />
+            <div class="container">
+                <input type="checkbox" name="check-box" id="check-box" />
+                <label for="check-box"> Remember</label>
+            </div>
+            
             <input type="submit" name="" value="Login" />
             <br />
             <a href="#">Create Password</a>
-
         </form>
     </div>
 </body>
@@ -36,7 +37,7 @@
     }
 
     .Login {
-        position: absolute;
+        position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -114,6 +115,16 @@
     .Login a:hover {
         color: red;
     }
-    
+    .container{
+        display:flex;
+        padding-right: 170px;
+        margin-top:-10px;
+    }
+    .container label{
+        font-size:14px;
+        font:bold;
+        margin-top:1px;
+        color:blue;
+    }
 </style>
 
