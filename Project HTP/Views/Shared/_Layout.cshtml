@@ -9,21 +9,44 @@
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Project_HTP</a>
+    <header class="header">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="~/icon/Logo_htp.jpg" alt="logo" width="80" height="80"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="menu navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="login navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Đăng Nhập</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav flex-grow-1 ">
+                        <li class="nav-item">
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Giới Thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text" asp-area="" asp-controller="StudentLists" asp-action="">Danh Sách Sinh Viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Nhà Tài Trợ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Tài Chính</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Tình Nguyện Viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Hoạt Động</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Pháp Lý</a>
                         </li>
                     </ul>
                 </div>
@@ -54,21 +77,21 @@
                 <div class="col-sm-6">
                     <ul class="list-inline text-right social">
                         <li>
-                            <a href="https://www.instagram.com/?hl=vi"><img src="https://i0.pngocean.com/files/554/20/29/logo-computer-icons-royalty-free-clip-art-instagram-logo.jpg" alt="instagram" width="25" height="28"></a>
+                            <a href="https://www.instagram.com/?hl=vi"><img src="~/icon/Instagram_svg.png" alt="instagram" width="25" height="28"></a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/channel/UCM41OLqh8vIL0UH6qQ-qM_g"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScpPyPe7YXOE7m09_OKnfKpBHUaPc2DXXuAA&usqp=CAU" alt="youtube" width="25" height="28"></a>
+                            <a href="https://www.youtube.com/channel/UCM41OLqh8vIL0UH6qQ-qM_g"><img src="~/icon/Youtube_svg.png" alt="youtube" width="25" height="28"></a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/htpfoundation/"><img src="https://f0.pngfuel.com/png/438/729/black-and-white-facebook-logo-facebook-computer-icons-like-button-black-and-white-png-clip-art.png" alt="facebook" width="25" height="28"></a>
+                            <a href="https://www.facebook.com/htpfoundation/"><img src="~/icon/Facebook_svg.png" alt="facebook" width="25" height="28"></a>
                         </li>
-                    </ul>                   
+                    </ul>
                 </div>
                 <div class="col-sm-12 namcopy">
                     Quỹ học bỗng Huỳnh Tấn Phát . <br>11 Lê Ngô Cát, P7, Q3, TP.HCM. <br>Phone: 0765261579‬ (Ms Ngọc). <br>Email: quyhocbonghuynhtanphat@gmail.com
                 </div>
                 <div class="copy text-right namcopy"> &copy; 2020 - Nhan Tong Application</div>
-            </div>          
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
