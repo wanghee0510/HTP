@@ -15,6 +15,9 @@ namespace Project_HTP.Models
         
         public string FullContent { get; set; }
         
+
+
+
         public string CoverImg { get; set; }
     }
 }
