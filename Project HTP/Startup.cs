@@ -26,8 +26,8 @@ namespace Project_HTP
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<DbContextHTP>(options => options.UseSqlServer("Data Source=DESKTOP-RSNVJDQ;Initial Catalog=HTP;User ID=sa;password=123;MultipleActiveResultSets=True;App=EntityFramework"));
-
+            services.AddDbContext<Dbcontext>(options => options.UseSqlServer("data source=LAPTOP-V9NQLF42;initial catalog=HTP;persist security info=True;" +
+                "user id=sa;password=123;MultipleActiveResultSets=True;App=EntityFramework"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
