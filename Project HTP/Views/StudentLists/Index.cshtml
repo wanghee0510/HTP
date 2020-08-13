@@ -1,15 +1,15 @@
-﻿
-@model IEnumerable<Project_HTP.Models.StudentList>
+﻿@model IEnumerable<Project_HTP.Models.StudentList>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h4>Danh sách sinh viên </h4>
-<hr />
+<h1>Danh Sách sinh viên</h1>
 
-
-<table class="table table-hover">
+<p>
+    <a class="btn btn-dark" asp-action="Create" style="margin-bottom:5px;">Create New</a>
+</p>
+<table class="table">
     <thead>
         <tr>
             <th>
@@ -24,33 +24,50 @@
             <th>
                 @Html.DisplayNameFor(model => model.CoverImg)
             </th>
-            <th>
-                <a asp-action="AddOrEdit" class="btn btn-outline-success"><i class="far fa-plus-square"></i>Thêm Sinh Viên</a>
-            </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ShortDescription)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FullContent)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CoverImg)
-                </td>
-                <td>
-                    <a asp-action="AddOrEdit" asp-route-id="@item.StudentListId"><i class="fa fa-marker fa-lg"></i>Sửa </a>
-                    <a asp-action="Delete" asp-route-id="@item.StudentListId" class="text-danger ml-1" onclick="return confirm('Bạn có chắc chẵn muốn xóa')"><i class="fa fa-trash-alt fa-lg"></i>Xóa</a>
-                </td>
-            </tr>
-        }
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoverImg)
+            </td>
+            <td>
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.StudentListId">Edit</a> |
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.StudentListId">Details</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.StudentListId">Delete</a>
+            </td>
+        </tr>
+} 
     </tbody>
 </table>
+<style>
+    th, td {
+        border: 1px solid #808080;
+        text-align: center;
+    }
 
+    h1 {
+        color: #0094ff;
+        text-shadow: 5px 5px 10px skyblue;
+        text-align: center;
+    }
+
+    thead {
+        background: #c4bebe;
+    }
+
+    th {
+        color: #0026ff;
+    }
+</style>
