@@ -20,7 +20,7 @@
                 <div class="menu navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="login navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Đăng Nhập</a>
+                            <a class="nav-link text" asp-area="" asp-controller="LoginUsers" asp-action="Index">Đăng Nhập</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav flex-grow-1 ">
@@ -54,11 +54,11 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-5">
             @RenderBody()
         </main>
     </div>
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
@@ -74,8 +74,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-sm-6">
-                    <ul class="list-inline text-right social">
+                <div class="logoname col-sm-6 ">
+                    <ul class="list-inline col-sm-12">
                         <li>
                             <a href="https://www.instagram.com/?hl=vi"><img src="~/icon/Instagram_svg.png" alt="instagram" width="25" height="28"></a>
                         </li>
@@ -86,11 +86,12 @@
                             <a href="https://www.facebook.com/htpfoundation/"><img src="~/icon/Facebook_svg.png" alt="facebook" width="25" height="28"></a>
                         </li>
                     </ul>
+                    <div class="col-sm-12 namcopy"> &copy; 2020 - Nhan Tong Application</div>
                 </div>
-                <div class="col-sm-12 namcopy">
+                <div class="col-sm-6 namcopy">
                     Quỹ học bỗng Huỳnh Tấn Phát . <br>11 Lê Ngô Cát, P7, Q3, TP.HCM. <br>Phone: 0765261579‬ (Ms Ngọc). <br>Email: quyhocbonghuynhtanphat@gmail.com
                 </div>
-                <div class="copy text-right namcopy"> &copy; 2020 - Nhan Tong Application</div>
+                
             </div>
         </div>
     </footer>

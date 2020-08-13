@@ -90,7 +90,7 @@ body {
     width: 100%;
     white-space: nowrap;
     line-height: normal; /*Vertically center the text there */
-    background-color: lightgray;
+    background-color: #464f57;
 }
 
 .container-fluid {
@@ -106,7 +106,8 @@ body {
 }
 
 .list-inline {
-    padding-left: 0;
+    padding-bottom: 5px;
+    padding-top: 10px;
     margin-left: -5px;
     list-style: none;
     margin-top: 7px;
@@ -129,12 +130,12 @@ body {
 }
 
 .namcopy {
-    font-size: 0.44em;
-    color: #000000;
+    font-size: 0.45em;
+    color: #f8f9fa;   
     text-transform: uppercase;
     font-family: 'Arial';
     letter-spacing: 2px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 .col-sm-6, .col-sm-12 {
@@ -143,7 +144,7 @@ body {
     padding-left: 15px;
 }
 
-footer ul, .namcopy {
+footer ul, .namcopy{
     text-align: !important;
 }
 
@@ -152,6 +153,7 @@ footer ul, .namcopy {
 }
 
 .copy {
+    padding-top: 10px;
     padding-left: 15px;
     padding-bottom: 5px;
 }
@@ -159,5 +161,7 @@ footer ul, .namcopy {
 ul {
     margin: 0;
 }
-
+.logoname{
+    text-align:right;
+}
 

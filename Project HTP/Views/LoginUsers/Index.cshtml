@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<Project_HTP.Models.LoginUser>
 
 @{
-    Layout = null;
+    
 }
-<head>   
+<head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -12,15 +12,15 @@
         <h2>Member Login</h2>
 
         <form>
-            <i class="fa fa-envelope-o icon">  Email</i>
+            <i class="fas fa-envelope-o icon">  Email</i>
             <input type="email" name="email" placeholder="Email" />
-            <i class="fa fa-key icon">  Password</i>
+            <i class="fas fa-key icon">  Password</i>
             <input type="password" name="pass" placeholder="******" />
             <div class="container">
                 <input type="checkbox" name="check-box" id="check-box" />
                 <label for="check-box"> Remember</label>
             </div>
-            
+
             <input type="submit" name="" value="Login" />
             <br />
             <a href="#">Create Password</a>
@@ -47,64 +47,66 @@
         box-sizing: border-box;
         background: rgba(0,0,0,0.3);
     }
-    img{
-        width:70px;
-        margin-top:-70px;
-        padding-left:100px
-        
+
+    img {
+        width: 70px;
+        margin-top: -70px;
+        padding-left: 100px
     }
+
     h2 {
-        
         font: bold;
         padding: 0;
         margin: 0;
         text-align: center;
         color: blue;
         font-size: 25px;
-        margin-bottom:10px
+        margin-bottom: 10px
     }
-    .Login i{
-        margin-left:15px;
-        margin-bottom:10px;
-        color:white;
-        font-size:15px;
+
+    .Login i {
+        margin-left: 15px;
+        margin-bottom: 10px;
+        color: white;
+        font-size: 15px;
         border-bottom: 2px solid white;
     }
+
     .Login input {
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .Login input[type="text"], input[type="password"] {
-        border: none;
-        background: rgba(0,0,0,0.4);
-        outline: none;
-        height: 40px;
-        font-size: 13px;
-        color:white;
-        border-radius: 20px;
-        padding-left: 10px;
-    }
-    
-    .Login input[type="submit"] {
-        border: none;
-        outline: none;
-        height: 40px;
-        background: linear-gradient(to right,blue,#2b96d1);
-        color: darkblue;
-        font-size: 18px;
-        font:blod;
-        border-radius: 20px;
-    }       
+        .Login input[type="email"], input[type="password"] {
+            border: none;
+            background: rgba(0,0,0,0.4);
+            outline: none;
+            height: 40px;
+            font-size: 13px;
+            color: white;
+            border-radius: 20px;
+            padding-left: 10px;
+        }
 
-    .Login input[type="submit"]:hover {
-        cursor: pointer;
-        background: red;
-        color: #000;
-    }
+        .Login input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: linear-gradient(to right,blue,#2b96d1);
+            color: darkblue;
+            font-size: 18px;
+            font: blod;
+            border-radius: 20px;
+        }
+
+            .Login input[type="submit"]:hover {
+                cursor: pointer;
+                background: red;
+                color: #000;
+            }
 
     .Login a {
-        padding-left:80px;
+        padding-left: 80px;
         margin: 12px 0;
         text-decoration: none;
         font-size: 15px;
@@ -112,19 +114,20 @@
         color: blue;
     }
 
-    .Login a:hover {
-        color: red;
-    }
-    .container{
-        display:flex;
-        padding-right: 170px;
-        margin-top:-10px;
-    }
-    .container label{
-        font-size:14px;
-        font:bold;
-        margin-top:1px;
-        color:blue;
-    }
-</style>
+        .Login a:hover {
+            color: red;
+        }
 
+    .container {
+        display: flex;
+        padding-right: 170px;
+        margin-top: -10px;
+    }
+
+        .container label {
+            font-size: 14px;
+            font: bold;
+            margin-top: 1px;
+            color: blue;
+        }
+</style>

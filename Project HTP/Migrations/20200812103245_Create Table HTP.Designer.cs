@@ -8,9 +8,9 @@ using Project_HTP.Models;
 
 namespace Project_HTP.Migrations
 {
-    [DbContext(typeof(Dbcontext))]
-    [Migration("20200804063100_Create Table Login")]
-    partial class CreateTableLogin
+    [DbContext(typeof(DbContextHTP))]
+    [Migration("20200812103245_Create Table HTP")]
+    partial class CreateTableHTP
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,7 +40,34 @@ namespace Project_HTP.Migrations
 
                     b.HasKey("LoginID");
 
-                    b.ToTable("loginUsers");
+                    b.ToTable("LoginUsers");
+                });
+
+            modelBuilder.Entity("Project_HTP.Models.StudentList", b =>
+                {
+                    b.Property<int>("StudentListId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FullContent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("ShortDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("StudentListId");
+
+                    b.ToTable("StudentLists");
                 });
 #pragma warning restore 612, 618
         }

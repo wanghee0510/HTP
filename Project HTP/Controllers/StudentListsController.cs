@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,10 +14,13 @@ namespace Project_HTP.Controllers
     public class StudentListsController : Controller
     {
         private readonly DbContextHTP _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public StudentListsController(DbContextHTP context)
+
+        public StudentListsController(DbContextHTP context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            this._hostEnvironment = hostEnvironment;
         }
 
         // GET: StudentLists
@@ -53,10 +58,21 @@ namespace Project_HTP.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StudentListId,Title,ShortDescription,FullContent,CoverImg")] StudentList studentList)
+        public async Task<IActionResult> Create([Bind("StudentListId,Title,ShortDescription,FullContent,ImageFile")] StudentList studentList)
         {
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(studentList.ImageFile.FileName);
+                string extension = Path.GetExtension(studentList.ImageFile.FileName);
+                studentList.ImageName = fileName = fileName + DateTime.Now.ToString("yymmssff") + extension;
+                string path = Path.Combine(wwwRootPath + "/image/", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await studentList.ImageFile.CopyToAsync(fileStream);
+                }
+
+
                 _context.Add(studentList);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -85,7 +101,7 @@ namespace Project_HTP.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("StudentListId,Title,ShortDescription,FullContent,CoverImg")] StudentList studentList)
+        public async Task<IActionResult> Edit(int id, [Bind("StudentListId,Title,ShortDescription,FullContent,ImageName")] StudentList studentList)
         {
             if (id != studentList.StudentListId)
             {

@@ -19,5 +19,6 @@ namespace Project_HTP.Models
         {
         }
         public DbSet<StudentList> StudentLists { get; set; }
+        public DbSet<LoginUser> LoginUsers { get; set; }
     }
 }
